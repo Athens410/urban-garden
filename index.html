@@ -251,10 +251,27 @@
        .animated-link{
 
 
-          animation: moveUpDown 5s infinite alternate, moveSideToSide 3s infinite alternate;
+          animation: moveUpDown 1s infinite alternate, moveSideToSide 1s infinite alternate;
        } 
 
-       
+       @keyframes moveUpDown {
+  20% {
+    transform: translateY(33px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes moveSideToSide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px); 
+  }
+}
+
     </style>
 </head>
 
