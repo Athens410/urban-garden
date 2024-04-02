@@ -34,7 +34,29 @@ h1{
     color: #04681a;
 }
 
+ .animated-link{
 
+
+          animation: moveUpDown 1s infinite alternate, moveSideToSide 1s infinite alternate;
+       } 
+
+       @keyframes moveUpDown {
+  20% {
+    transform: translateY(33px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+
+@keyframes moveSideToSide {
+  0% {
+    transform: translateX(40);
+  }
+  100% {
+    transform: translateX(20px); 
+  }
+}
 
 
 
