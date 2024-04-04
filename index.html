@@ -167,6 +167,7 @@ color: rgb(255, 255, 255);
 .your-class{
     background-color: rgb(0, 255, 42);
     padding: 33px;
+    text-align: center;
 
 }
 
@@ -278,8 +279,10 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/164/origina
 
         <!--leaf-->
 
-     <div></div>   
+     <div class="container">  
+  <div class="row justify-content-center"></div>      
 <div class="your-class">
+
     <div>
         
         <h2>What makes these green spaces so vital in urban areas?</h2>
@@ -292,13 +295,17 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/164/origina
     </div>
     
     </div>
-    <div>your content</div>
-    <div>your content</div>
+    <div>1</div>
+    <div>2</div>
         <div>yent</div>
         <div>ent</div>
         <div>yontent</div>
-</div>
 
+
+
+</div>
+</div>
+</div> 
     </div>
 
 <ul class="nav justify-content-center mt-5">
@@ -312,8 +319,8 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/164/origina
     </li>
 
     <li class="timezx">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">© 2021 SheCodes All rights
-            reserved.</a>
+        <a     class="nav-link disabled" href="#"   id="wren"   tabindex="-1" aria-disabled="true">
+            </a>
     </li>
 </ul>
 
@@ -328,14 +335,17 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/164/origina
 
     <script>
 
-  
+const year = new Date().getFullYear();
+
+document.getElementById('wren').textContent = `© ${year} SheCodes All rights
+            reserved.`;
 
  
     $(document).ready(function () {
         $('.your-class').slick({
             infinite: true,
             slidesToShow: 2,
-            slidesToScroll: 3
+            slidesToScroll: 2
       });
     });
     </script>
