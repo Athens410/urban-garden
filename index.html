@@ -13,7 +13,7 @@
 
 <!-- jQuery -->
 
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 
 
 
@@ -25,7 +25,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@500;700&display=swap"
         rel="stylesheet" />
-
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <style>
         body {
@@ -271,7 +271,11 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/164/origina
 
 
     </div>
-
+<div class="your-class">
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+</div>
 <ul class="nav justify-content-center mt-5">
     <li class="nav-item">
         <a class="nav-link active" href="https://www.shecodes.io/" target="_blank" title="SheCodes profile">SheCodes</a>
@@ -306,7 +310,13 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/164/origina
   
 
  
-
+    $(document).ready(function () {
+        $('.your-class').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+      });
+    });
     </script>
 
 
