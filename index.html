@@ -124,6 +124,15 @@ color: rgb(255, 255, 255);
             animation: start 1s ease-in-out infinite alternate;
 
         }
+          @keyframes start {
+            from {
+                text-shadow: 0 0 20px #fffefe;
+            }
+
+            to {
+                text-shadow: 0 0 30px #b52b2b, 0 0 10px #000000;
+            }
+        }
         .col-6 {
             margin: 0 auto;
         }
@@ -136,19 +145,20 @@ color: rgb(255, 255, 255);
 
         .tammy{
 
-           background-color: #04681a;
-            animation: glow  2s ease-in-out   infinite  ;
+       
+            animation: glow 2s ease-in-out   infinite  ;
         }
-   @keyframes glow {
-   0% {
-    text-shadow: 0 0 5px #fff;
-  }
-  100% {
-    text-shadow: 0 0 20px #fff;
-  }
 
-}
 
+  @keyframes glow {
+            from {
+                text-shadow: 0 0 20px #fffefe;
+            }
+
+            to {
+                text-shadow: 0 0 30px #b52b2b, 0 0 10px #000000;
+            }
+        }
 
 
     </style>
