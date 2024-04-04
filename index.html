@@ -168,9 +168,20 @@ color: rgb(255, 255, 255);
     background-color: rgb(85, 237, 110);
     padding: 33px;
     text-align: center;
-
+border: solid rgb(0, 179, 255);
+border-radius: 12px;
+animation: vert 2s infinite alternate ;
 }
 
+  @keyframes vert {
+            from {
+                box-shadow: 0 0 40px #00e1ff;
+            }
+
+            to {
+                box-shadow:  0 0 30px #00ff1a, 0 0 20px #009f50;
+            }
+        }
 .your-class button{
     color: aqua;
     margin: 12px;
