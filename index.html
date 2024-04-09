@@ -501,6 +501,7 @@ document.getElementById('wren').textContent = `© ${year} SheCodes All rights
     },{
         question: "Which of the following is a popular herb used in Italian cooking?",
         options: [" Oregano"," Cilantro","Tarragon","Chives"],
+        answer: "Oregano"
 
     }
 
@@ -508,7 +509,7 @@ document.getElementById('wren').textContent = `© ${year} SheCodes All rights
     ]
 
     let currentQuestionIndex = 0;
-    let score = 0;
+    let score = 1;
 
     function loadQuestion() {
         const currentQuestion = questions[currentQuestionIndex];
