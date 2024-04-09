@@ -515,7 +515,21 @@ const questionContainer = document.getElementById('question');
 
 let currentQuestionIndex = 0;
 let socre = 0;
+function loadFunaction(){
 
+const currentQuestion = questions[currentQuestionIndex];
+
+questionContainer.textContent = currentQuestion.question;
+questionContainer.innerHTML = '';
+
+currentQuestion.options.forEach((option, index) => {
+
+
+
+})
+
+
+}
 
     </script>
 
