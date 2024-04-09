@@ -523,10 +523,14 @@ questionContainer.textContent = currentQuestion.question;
 questionContainer.innerHTML = '';
 
 currentQuestion.options.forEach((option, index) => {
+ let button = document.querySelector('submit-btn');
+ button.textContent = option;
+
+ button.addEventListener("click", () => checkAnswer (option));
 
 
 
-})
+});
 
 
 }
