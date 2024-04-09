@@ -527,14 +527,24 @@ currentQuestion.options.forEach((option, index) => {
  button.textContent = option;
 
  button.addEventListener("click", () => checkAnswer (option));
-
+optionsContainer.appendChild(button);
 
 
 });
 
 
 }
+function checkAnswer(selectedOption){
 
+const currentQuestion = questions[currentQuestionIndex];
+if(selectedOption === currentQuestion.answer){
+
+score++;
+
+feedbackContainer.textContent = "Correct!";
+}
+
+}
     </script>
 
 
