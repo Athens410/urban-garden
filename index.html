@@ -483,68 +483,67 @@ document.getElementById('wren').textContent = `© ${year} SheCodes All rights
       });
     });
 
+    const questionContainer = document.getElementById('question');
+    const optionsContainer = document.getElementById('options-container');
+    const feedbackContainer = document.getElementById('feedback');
+    const submitButton = document.getElementById('submit-btn');
 
-const questions = [
-{
-
- question: "Which plant is known as the 'king of herbs'?",
-    options: ["Basil", "Rosemary", "Mint", "Thyme"],
-    answer: "Basil"
-
-},{
-
+    const questions = [{
+        question: "Which plant is known as the 'king of herbs'?",
+        options: ["Basil", "Rosemary", "Mint", "Thyme"],
+        answer: "Basil"
+    },
+    {
         question: "What is a common technique used for composting in urban gardens?",
         options: ["Vermicomposting", "Mulching", "Aerobic composting", "Direct composting"],
         answer: "Vermicomposting"
+    }
 
-}
-   
+    
+    ]
 
+    let currentQuestionIndex = 0;
+    let score = 0;
 
+    function loadQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+        questionContainer.textContent = currentQuestion.question;
+        optionsContainer.innerHTML = '';
 
+        currentQuestion.options.forEach((option, index) => {
+            let button = document.createElement('button');
+            button.textContent = option;
+            button.addEventListener("click", () => checkAnswer(option));
+            optionsContainer.appendChild(button);
+        });
+    }
 
+    function checkAnswer(selectedOption) {
+        const currentQuestion = questions[currentQuestionIndex];
+        if (selectedOption === currentQuestion.answer) {
+            score++;
+            feedbackContainer.textContent = "Correct!";
+        } else {
+            feedbackContainer.textContent = "Incorrect. The correct answer is: " + currentQuestion.answer;
+        }
 
-]
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+        } else {
+            displayScore();
+        }
+    }
 
+    function displayScore() {
+        questionContainer.textContent = '';
+        optionsContainer.innerHTML = '';
+        submitButton.style.display = 'none';
+        feedbackContainer.textContent = `You scored ${score} out of ${questions.length}!`;
+    }
 
-const questionContainer = document.getElementById('question');
-    const optionsContainer = document.getElementById('options-container');
-    const feedbackContainer = document.getElementById('feedback');
-       const submitButton = document.getElementById('submit-btn');
-
-
-let currentQuestionIndex = 0;
-let socre = 0;
-function loadFunaction(){
-
-const currentQuestion = questions[currentQuestionIndex];
-
-questionContainer.textContent = currentQuestion.question;
-questionContainer.innerHTML = '';
-
-currentQuestion.options.forEach((option, index) => {
- let button = document.querySelector('submit-btn');
- button.textContent = option;
-
- button.addEventListener("click", () => checkAnswer (option));
-optionsContainer.appendChild(button);
-
-
-});
-
-
-}
-function checkAnswer(selectedOption){
-
-const currentQuestion = questions[currentQuestionIndex];
-if(selectedOption === currentQuestion.answer){
-
-score++;
-
-feedbackContainer.textContent = "Correct!";
-}
-
-}
+    loadQuestion();
+    
     </script>
 
 
