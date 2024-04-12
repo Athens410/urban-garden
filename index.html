@@ -217,20 +217,16 @@ text-align: center;
     border: 11px;
 color: #f5f7f7;
 padding: 12px;
-         animation: urban 2s alternate-reverse
+         animation: urban 2s infinite;
 }
 
 
      @keyframes urban {
-  10% {
-    transform: translateY(13px);
+  0%, 100% {
+    transform: translateY(0);
   }
   50% {
     transform: translateY(10px);
-  }
-
- 100% {
-    transform: translateY(13px);
   }
 
 }
