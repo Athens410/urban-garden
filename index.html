@@ -343,9 +343,12 @@ margin-top: 52px;
 
 
 <div class="five">
-
+<div></div>
      <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/261/original/Untitled_copy_3.png?1706809963"
                         alt="" srcset=""> 
+                        <div>Content 1</div>
+                        <div>Content 2</div>
+                        <div>Content 3</div>
 </div>
                   
                 </div>
@@ -514,7 +517,13 @@ document.getElementById('wren').textContent = `© ${year} SheCodes All rights
 
  
     $('.your-class').slick();
-
+    $('.five').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
     const questionContainer = document.getElementById('question');
     const optionsContainer = document.getElementById('options-container');
     const feedbackContainer = document.getElementById('feedback');
