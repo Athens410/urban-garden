@@ -617,6 +617,14 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/124/799/origina
 </div>
 
 <div>
+
+<div class="col-md-5">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/124/931/original/Untitled_design.png?1714431242"
+        alt="" srcset="">
+
+
+
+</div>
 test
 
 
@@ -733,9 +741,16 @@ document.getElementById('wren').textContent = `© ${year} SheCodes All rights
             reserved.`;
 
  
-    $('.your-class').slick();
+    $('.your-class').slick({
 
-    
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+
+    });
+
+
     $('.five').slick({
 
         infinite: true,
